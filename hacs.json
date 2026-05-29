@@ -1,0 +1,6 @@
+{
+  "name": "HA3D Floor Plan Card",
+  "render_readme": true,
+  "filename": "ha3d-floor-plan-card.js",
+  "homeassistant": "2024.8.0"
+}

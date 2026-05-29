@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "unit": "m",
+  "name": "Ground floor",
+  "rooms": [
+    { "id": "living", "name": "Living room", "x": 0, "z": 0, "width": 5.2, "depth": 4.2, "color": "#d7c7ad" },
+    { "id": "kitchen", "name": "Kitchen", "x": 5.4, "z": 0, "width": 3.4, "depth": 4.2, "color": "#c7d3da" },
+    { "id": "bedroom", "name": "Bedroom", "x": 0, "z": 4.4, "width": 4.2, "depth": 3.6, "color": "#d8c4d8" }
+  ],
+  "entities": [
+    { "entity": "light.living_room", "name": "Living lamp", "room": "living", "position": { "x": 2.6, "z": 2.1 } },
+    { "entity": "climate.living_room", "name": "Living thermostat", "room": "living", "position": { "x": 4.6, "z": 3.4 } },
+    { "entity": "cover.kitchen_blinds", "name": "Kitchen blinds", "room": "kitchen", "position": { "x": 7.8, "z": 0.4 } }
+  ]
+}

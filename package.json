@@ -1,0 +1,16 @@
+{
+  "name": "ha3d-floor-plan-card",
+  "version": "0.1.0",
+  "description": "A HACS-ready Home Assistant Lovelace card for AI-generated Three.js 3D floor plans with clickable entities.",
+  "type": "module",
+  "main": "dist/ha3d-floor-plan-card.js",
+  "files": ["dist", "hacs.json", "README.md", "docs", "examples", "skills"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "lint": "node --check src/schema.mjs && node --check src/home-assistant.mjs && node --check src/ha3d-floor-plan-card.mjs && node --check scripts/build.mjs"
+  },
+  "keywords": ["home-assistant", "hacs", "lovelace", "threejs", "floorplan"],
+  "author": "Romain Barissat",
+  "license": "MIT"
+}
