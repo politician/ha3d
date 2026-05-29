@@ -1,0 +1,58 @@
+type: custom:ha3d-floorplan-card
+title: Apartment 3D
+default_layer: lights
+camera:
+  position: [7, 8, 7]
+  target: [4, 0, 2.5]
+  fov: 45
+performance:
+  pixel_ratio_cap: 1.5
+  shadows: true
+  antialias: true
+plan:
+  name: Demo apartment
+  units: m
+  materials:
+    living:
+      color: "#dbeafe"
+      opacity: 0.75
+  floors:
+    - id: ground
+      name: Ground floor
+      elevation: 0
+      outline:
+        - { x: 0, y: 0 }
+        - { x: 8, y: 0 }
+        - { x: 8, y: 5 }
+        - { x: 0, y: 5 }
+      rooms:
+        - id: living
+          name: Living room
+          material: living
+          polygon:
+            - { x: 0.2, y: 0.2 }
+            - { x: 7.8, y: 0.2 }
+            - { x: 7.8, y: 4.8 }
+            - { x: 0.2, y: 4.8 }
+      walls:
+        - { from: { x: 0, y: 0 }, to: { x: 8, y: 0 }, height: 2.7, thickness: 0.12 }
+        - { from: { x: 8, y: 0 }, to: { x: 8, y: 5 }, height: 2.7, thickness: 0.12 }
+        - { from: { x: 8, y: 5 }, to: { x: 0, y: 5 }, height: 2.7, thickness: 0.12 }
+        - { from: { x: 0, y: 5 }, to: { x: 0, y: 0 }, height: 2.7, thickness: 0.12 }
+  entities:
+    - entity: light.living_room
+      layer: lights
+      label: Living room lights
+      icon: 💡
+      position: [3, 1.15, 2.4]
+    - entity: climate.living_room
+      layer: climate
+      label: Thermostat
+      icon: 🌡️
+      action: more-info
+      position: [6.8, 1.2, 1]
+    - entity: cover.patio_door
+      layer: covers
+      label: Patio cover
+      icon: 🪟
+      position: [7.6, 1.2, 3.8]

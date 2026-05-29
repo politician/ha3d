@@ -1,0 +1,17 @@
+{
+  "name": "ha3d-floorplan-card",
+  "version": "0.1.0",
+  "description": "HACS Lovelace card for AI-generated Three.js 3D Home Assistant floor plans with clickable entity icons.",
+  "type": "module",
+  "main": "dist/ha3d-floorplan-card.js",
+  "files": ["dist", "hacs.json", "README.md", "docs", "skills", "examples"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "lint": "node --check src/plan-utils.js && node --check src/ha3d-floorplan-card.js && node --check scripts/build.mjs",
+    "validate": "npm run lint && npm run test && npm run build"
+  },
+  "keywords": ["home-assistant", "hacs", "lovelace", "threejs", "floorplan"],
+  "license": "MIT",
+  "engines": { "node": ">=20" }
+}
