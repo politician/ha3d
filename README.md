@@ -58,9 +58,22 @@ plan:
 ## AI workflow (Claude/Copilot/ChatGPT)
 
 1. Gather room photos + rough dimensions + Home Assistant entity IDs.
-2. Use `docs/ai_skill_prompt.md` with your preferred LLM provider.
-3. Save generated JSON and validate it using service `ha3d.validate_plan`.
-4. Host JSON in `/config/www/...` and reference it with `plan_url`.
+2. Install the HA3D skill profile for your LLM:
+   - ChatGPT: `/tmp/workspace/politician/ha3d/docs/skills/chatgpt.md`
+   - Claude: `/tmp/workspace/politician/ha3d/docs/skills/claude.md`
+   - Copilot: `/tmp/workspace/politician/ha3d/docs/skills/copilot.md`
+3. Use `/tmp/workspace/politician/ha3d/docs/ai_skill_prompt.md` as the base instructions.
+4. Save generated JSON and validate it using service `ha3d.validate_plan`.
+5. Host JSON in `/config/www/...` and reference it with `plan_url`.
+
+### Skill installation quick start
+
+If you want the fastest setup:
+
+1. Pick your assistant (ChatGPT, Claude, or Copilot) and open the matching guide in `/tmp/workspace/politician/ha3d/docs/skills/`.
+2. Copy the prompt from `/tmp/workspace/politician/ha3d/docs/ai_skill_prompt.md` into that assistant's instruction/profile area.
+3. Upload photos + dimensions + entity IDs.
+4. Ask for HA3D JSON output only, then validate via `ha3d.validate_plan`.
 
 ### Schema summary
 

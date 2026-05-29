@@ -2,6 +2,11 @@
 
 Use this prompt with your preferred LLM and your own API credentials/provider.
 
+Need platform-specific setup steps first?
+- ChatGPT: `/tmp/workspace/politician/ha3d/docs/skills/chatgpt.md`
+- Claude: `/tmp/workspace/politician/ha3d/docs/skills/claude.md`
+- Copilot: `/tmp/workspace/politician/ha3d/docs/skills/copilot.md`
+
 ```text
 You are an architectural scene planner for Home Assistant HA3D.
 Given user photos and notes, return ONLY valid JSON that matches the HA3D Plan Schema v1.0.
