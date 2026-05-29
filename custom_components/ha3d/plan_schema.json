@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HA3D Plan Schema",
+  "type": "object",
+  "required": ["version", "rooms", "walls", "openings", "camera", "entities"],
+  "properties": {
+    "version": { "type": "string", "const": "1.0" },
+    "rooms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "polygon"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "height": { "type": "number", "default": 2.6 },
+          "polygon": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "array",
+              "prefixItems": [{ "type": "number" }, { "type": "number" }],
+              "items": false
+            }
+          }
+        }
+      }
+    },
+    "walls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "from", "to", "height"],
+        "properties": {
+          "id": { "type": "string" },
+          "from": {
+            "type": "array",
+            "prefixItems": [{ "type": "number" }, { "type": "number" }],
+            "items": false
+          },
+          "to": {
+            "type": "array",
+            "prefixItems": [{ "type": "number" }, { "type": "number" }],
+            "items": false
+          },
+          "height": { "type": "number" },
+          "thickness": { "type": "number", "default": 0.12 }
+        }
+      }
+    },
+    "openings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "wall_id", "offset", "width", "bottom", "height", "kind"],
+        "properties": {
+          "id": { "type": "string" },
+          "wall_id": { "type": "string" },
+          "kind": { "type": "string", "enum": ["door", "window"] },
+          "offset": { "type": "number" },
+          "width": { "type": "number" },
+          "bottom": { "type": "number" },
+          "height": { "type": "number" }
+        }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "required": ["position", "target"],
+      "properties": {
+        "position": {
+          "type": "array",
+          "prefixItems": [{ "type": "number" }, { "type": "number" }, { "type": "number" }],
+          "items": false
+        },
+        "target": {
+          "type": "array",
+          "prefixItems": [{ "type": "number" }, { "type": "number" }, { "type": "number" }],
+          "items": false
+        }
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "entity_id", "layer", "position"],
+        "properties": {
+          "id": { "type": "string" },
+          "entity_id": { "type": "string" },
+          "layer": { "type": "string", "enum": ["lights", "climate", "covers"] },
+          "position": {
+            "type": "array",
+            "prefixItems": [{ "type": "number" }, { "type": "number" }, { "type": "number" }],
+            "items": false
+          },
+          "icon": { "type": "string" },
+          "control": {
+            "type": "object",
+            "properties": {
+              "domain": { "type": "string" },
+              "service": { "type": "string" },
+              "data": { "type": "object" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

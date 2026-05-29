@@ -1,0 +1,13 @@
+{
+  "config": {
+    "abort": {
+      "single_instance_allowed": "Only a single HA3D instance is supported."
+    },
+    "step": {
+      "user": {
+        "title": "Set up HA3D",
+        "description": "Completes setup and exposes /ha3d/ha3d-card.js"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "domain": "ha3d",
+  "name": "HA3D",
+  "codeowners": [
+    "@politician"
+  ],
+  "documentation": "https://github.com/politician/ha3d",
+  "issue_tracker": "https://github.com/politician/ha3d/issues",
+  "iot_class": "local_push",
+  "loggers": [
+    "custom_components.ha3d"
+  ],
+  "requirements": [],
+  "version": "0.1.0",
+  "config_flow": true
+}
