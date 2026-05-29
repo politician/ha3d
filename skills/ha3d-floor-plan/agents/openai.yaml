@@ -1,0 +1,3 @@
+display_name: HA3D Floor Plan
+short_description: Generate Home Assistant HA3D floor plan JSON and Lovelace card YAML from photos, sketches, and entity lists.
+default_prompt: Create a HA3D floor plan JSON scene and Lovelace YAML for my Home Assistant dashboard. Ask me only for missing photos, measurements, or entity lists you need.

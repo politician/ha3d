@@ -1,0 +1,7 @@
+type: custom:ha3d-floor-plan-card
+title: Ground floor
+plan_url: /local/ha3d/simple-plan.json
+height: 560px
+default_layer: lights
+show_layer_buttons: true
+auto_rotate: false
