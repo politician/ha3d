@@ -1,0 +1,17 @@
+validate_plan:
+  name: Validate plan
+  description: Validate HA3D plan JSON against the required schema.
+  fields:
+    plan:
+      name: Plan
+      description: Parsed JSON object following the HA3D plan schema.
+      required: true
+      example: |
+        {
+          "version": "1.0",
+          "rooms": [{"id": "living", "name": "Living Room", "polygon": [[0,0],[6,0],[6,4],[0,4]]}],
+          "walls": [{"id": "w1", "from": [0,0], "to": [6,0], "height": 2.6}],
+          "openings": [],
+          "camera": {"position": [7, 6, 7], "target": [3, 0, 2]},
+          "entities": [{"id": "light.main", "entity_id": "light.living_main", "layer": "lights", "position": [3,0.2,2]}]
+        }

@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "rooms": [
+    {
+      "id": "living",
+      "name": "Living Room",
+      "height": 2.6,
+      "polygon": [[0, 0], [6, 0], [6, 4], [0, 4]]
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "height": 2.6,
+      "polygon": [[6, 0], [9, 0], [9, 4], [6, 4]]
+    }
+  ],
+  "walls": [
+    {"id": "w1", "from": [0, 0], "to": [9, 0], "height": 2.6},
+    {"id": "w2", "from": [9, 0], "to": [9, 4], "height": 2.6},
+    {"id": "w3", "from": [9, 4], "to": [0, 4], "height": 2.6},
+    {"id": "w4", "from": [0, 4], "to": [0, 0], "height": 2.6},
+    {"id": "w5", "from": [6, 0], "to": [6, 4], "height": 2.6}
+  ],
+  "openings": [
+    {"id": "d1", "wall_id": "w5", "kind": "door", "offset": 1.4, "width": 0.9, "bottom": 0.0, "height": 2.1}
+  ],
+  "camera": {
+    "position": [10, 9, 10],
+    "target": [4.5, 0, 2]
+  },
+  "entities": [
+    {"id": "living_light", "entity_id": "light.living_room_main", "layer": "lights", "position": [2.5, 0.2, 2], "icon": "💡"},
+    {"id": "living_thermostat", "entity_id": "climate.living_room", "layer": "climate", "position": [4, 0.2, 0.8], "icon": "🌡️"},
+    {"id": "kitchen_cover", "entity_id": "cover.kitchen_blind", "layer": "covers", "position": [8.2, 0.2, 3.2], "icon": "🪟"}
+  ]
+}
