@@ -68,12 +68,34 @@ plan:
 
 ### Skill installation quick start
 
-If you want the fastest setup:
+You want a remote install flow with no filesystem tinkering, so use the helper command:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/politician/ha3d/main/scripts/install-skill.sh | bash -s -- chatgpt
+```
+
+Replace `chatgpt` with `claude` or `copilot`.
+
+What it does:
+
+- fetches the canonical HA3D skill from GitHub
+- copies it to your clipboard when possible
+- opens the target UI when possible
+- avoids creating local prompt files
+
+If you want the raw prompt only:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/politician/ha3d/main/docs/skills/ha3d-skill.txt
+```
+
+Platform-specific details:
 
 1. Pick your assistant (ChatGPT, Claude, or Copilot) and open the matching guide in `/tmp/workspace/politician/ha3d/docs/skills/`.
-2. Copy the prompt from `/tmp/workspace/politician/ha3d/docs/ai_skill_prompt.md` into that assistant's instruction/profile area.
-3. Upload photos + dimensions + entity IDs.
-4. Ask for HA3D JSON output only, then validate via `ha3d.validate_plan`.
+2. Run the one-command installer for that platform.
+3. Paste into that assistant's instruction/profile area if the platform still requires a final save click.
+4. Upload photos + dimensions + entity IDs.
+5. Ask for HA3D JSON output only, then validate via `ha3d.validate_plan`.
 
 ### Schema summary
 

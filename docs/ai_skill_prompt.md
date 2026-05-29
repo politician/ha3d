@@ -2,6 +2,20 @@
 
 Use this prompt with your preferred LLM and your own API credentials/provider.
 
+## Remote install
+
+Canonical raw prompt URL:
+
+`https://raw.githubusercontent.com/politician/ha3d/main/docs/skills/ha3d-skill.txt`
+
+One-command helper:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/politician/ha3d/main/scripts/install-skill.sh | bash -s -- chatgpt
+```
+
+Replace `chatgpt` with `claude` or `copilot` as needed.
+
 Need platform-specific setup steps first?
 - ChatGPT: `/tmp/workspace/politician/ha3d/docs/skills/chatgpt.md`
 - Claude: `/tmp/workspace/politician/ha3d/docs/skills/claude.md`

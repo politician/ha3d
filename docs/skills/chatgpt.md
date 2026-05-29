@@ -2,16 +2,29 @@
 
 This is the easiest way to make ChatGPT generate HA3D plan JSON from photos.
 
-## Quick install
+## One-command install
 
-1. Open ChatGPT and go to **Explore GPTs**.
-2. Click **Create**.
-3. In **Configure**:
+```bash
+curl -fsSL https://raw.githubusercontent.com/politician/ha3d/main/scripts/install-skill.sh | bash -s -- chatgpt
+```
+
+This copies the HA3D skill to your clipboard and opens the ChatGPT GPT editor when your OS supports opening URLs.
+
+## Finish setup
+
+1. In ChatGPT, go to **Explore GPTs** → **Create**.
+2. In **Configure**:
    - Name: `HA3D Plan Builder`
    - Description: `Generates HA3D v1.0 floor plan JSON from photos and notes.`
-4. Paste the full prompt from `/tmp/workspace/politician/ha3d/docs/ai_skill_prompt.md` into **Instructions**.
-5. (Optional) Enable image input so you can upload room photos.
-6. Save the GPT (private or workspace).
+3. Paste the copied skill into **Instructions**.
+4. (Optional) Enable image input.
+5. Save the GPT.
+
+## Raw prompt only
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/politician/ha3d/main/docs/skills/ha3d-skill.txt
+```
 
 ## How to use
 
